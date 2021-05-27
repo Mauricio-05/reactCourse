@@ -1,0 +1,17 @@
+//React create element
+
+// const element = React.createElement(
+// "a",
+// { href: "https://google.com" },
+// "ir a google"
+// );
+
+//JSX
+// const element = (
+
+<!-- // <div>
+// <h1>Hola soy Mauricio</h1>
+// <p>Trabajo en HYG :D</p>
+// </div> -->
+
+// );
