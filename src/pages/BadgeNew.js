@@ -12,6 +12,20 @@ import header from "../images/badge-header.svg";
 import "./styles/BadgeNew.css";
 
 class BadgeNew extends React.Component {
+  state = {
+    form: {
+      jobTitle: "",
+      instagram: "",
+    },
+  };
+
+  handleChange = (e) => {
+    const nextForm = this.state.form;
+    nextForm[e.target.name] = e.target.value;
+    this.setState({
+      ...this.state.form,
+    });
+  };
   render() {
     return (
       <div>
@@ -22,11 +36,19 @@ class BadgeNew extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <Badge title="React" subTitle="RoadMap" autor="@mauricio05" />
+              <Badge
+                title="React"
+                subTitle="RoadMap"
+                jobTitle={this.state.form.jobTitle}
+                autor={this.state.form.instagram}
+              />
             </div>
 
             <div className="col-6">
-              <BadgeForm />
+              <BadgeForm
+                onChange={this.handleChange}
+                formValues={this.state.form}
+              />
             </div>
           </div>
         </div>
